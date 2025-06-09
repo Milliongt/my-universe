@@ -75,23 +75,3 @@ universe=> INSERT INTO moon (name, planet_id, size, has_ice, composition) VALUES
 INSERT 0 20
 universe=> INSERT INTO spacecraft (name, planet_id, speed, is_manned, notes) VALUES('Voyager 1', 4, 17000, FALSE, 'First spacecraft in interstellar space'),('Cassini', 5, 15000, FALSE, 'Studied Saturn and its moons'),('Apollo 11', 1, 11000, TRUE, 'First manned Moon landing');
 INSERT 0 3
-universe=> \d 
-                         List of relations
-+--------+------------------------------+----------+--------------+
-| Schema |             Name             |   Type   |    Owner     |
-+--------+------------------------------+----------+--------------+
-| public | galaxy                       | table    | freecodecamp |
-| public | galaxy_galaxy_id_seq         | sequence | freecodecamp |
-| public | moon                         | table    | freecodecamp |
-| public | moon_moon_id_seq             | sequence | freecodecamp |
-| public | planet                       | table    | freecodecamp |
-| public | planet_planet_id_seq         | sequence | freecodecamp |
-| public | spacecraft                   | table    | freecodecamp |
-| public | spacecraft_spacecraft_id_seq | sequence | freecodecamp |
-| public | star                         | table    | freecodecamp |
-| public | star_star_id_seq             | sequence | freecodecamp |
-+--------+------------------------------+----------+--------------+
-(10 rows)
-
-universe=> pg_dump -cC --inserts -U freecodecamp universe > universe.sql
-universe-> 
